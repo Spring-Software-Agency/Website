@@ -1,0 +1,201 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #757BDD;
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #757BDD;
+    padding: 10px 5%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 2em;
+    /* Increased size for visibility */
+}
+
+nav {
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+    /* Align nav items to the right */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 20px 15px;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-size: 1em;
+    /* Adjust size as needed */
+    transition: color 0.3s ease, transform 0.3s ease;
+    /* Smooth transition for color and transform */
+}
+
+nav a:hover {
+    color: #4B0082;
+    /* New color on hover */
+    transform: scale(1.1);
+    /* Enlarge the nav item */
+}
+
+.container {
+    padding: 20px;
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    /* Adjust spacing as needed */
+}
+
+nav a, .social-links a {
+    color: white;
+    text-decoration: none;
+    padding: 20px 15px;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-size: 1em; /* Adjust size as needed for nav links */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and transform */
+}
+
+nav a:hover, .social-links a:hover {
+    color: #4B0082; /* New color on hover */
+    transform: scale(1.1); /* Enlarge the nav item */
+}
+
+.social-links a {
+    font-size: 1.5em; /* Specific font size for social icons */
+    padding: 10px; /* Specific padding for social icons */
+    text-transform: none; /* No uppercase transform for icons */
+}
+
+.landing {
+    text-align: center;
+    padding: 50px 20px; /* Provide some initial padding */
+    background-image: url('landing_icon.png'); /* Path to your background image */
+    background-size: cover; /* Cover the entire area of the div */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    color: white; /* Text color */
+    height: 100vh; /* 100% of the viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* This centers the content vertically */
+}
+
+.landing h1 {
+    margin: 0 auto;
+    font-size: 4em; /* A larger font size for better visibility */
+    font-weight: bold;
+    line-height: 1.2;
+    padding: 0 20px; /* Padding to handle text overflow on smaller screens */
+    max-width: 1200px; /* Maximum width of the text to maintain readability */
+}
+
+.main-content {
+    max-width: 900px; /* Set a max-width for the content */
+    margin: 0 auto; /* Center the div */
+    text-align: center; /* Center the text */
+    background: #757BDD; /* The background color from the image */
+    padding: 40px; /* Add some padding around the content */
+    color: white; /* Set text color to white */
+    border-radius: 25px; /* Optional: if you want rounded corners like in the image */
+    position: relative; /* For positioning any child absolute elements */
+    margin-bottom: 50px
+}
+
+.main-content h2 {
+    font-size: 3em; /* Large font size for the title */
+    margin-bottom: 0.5em; /* Spacing between title and paragraph */
+}
+
+.main-content p {
+    line-height: 2.0; /* More readable line spacing */
+    margin-bottom: em; /* Spacing between paragraph and button */
+}
+
+button {
+    background-color: white; /* Button background */
+    color: #757BDD; /* Button text color */
+    border: none;
+    padding: 10px 20px;
+    text-transform: uppercase; /* Uppercase text on the button */
+    border-radius: 5px; /* Rounded corners on the button */
+    cursor: pointer; /* Mouse cursor becomes a hand icon */
+    font-weight: bold;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+button:hover {
+    background-color: #4B0082; /* Darker background on hover */
+    color: white;
+}
+.featured-services {
+    background-color: #757BDD; /* Dark purple background */
+    color: white; /* White text color */
+    text-align: center;
+}
+
+.section-title {
+    font-size: 3em; /* Adjust the size as needed */
+    margin-bottom: 2em; /* Space below the section title */
+}
+
+.service-container {
+    display: flex;
+    flex-wrap: wrap; /* Wrap items when they don't fit in a single row */
+    justify-content: center; /* Center-align the service blocks */
+    gap: 20px; /* Space between service blocks */
+}
+
+.service {
+    flex-basis: calc(33.333% - 20px); /* Take up a third of the container width, minus the gap */
+    max-width: 600px; /* Maximum width of service block */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    margin-bottom: 1em; /* Space between service blocks */
+}
+
+.service h3 {
+    font-size: 1.5em; /* Adjust the size as needed */
+    margin-bottom: 0.5em; /* Space below the service title */
+    text-align: left; /* Align the title to the left */
+    display: inline-block; /* Allows the border to fit the content */
+}
+
+.service p {
+    font-size: 1em;
+    text-align: left; /* Align the text to the left */
+    line-height: 1.6; /* Adjust line height for readability */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 1024px) {
+    .service {
+        flex-basis: calc(50% - 20px); /* Each service takes half of the container width on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .service-container {
+        flex-direction: column; /* Stack services vertically on small screens */
+    }
+    
+    .service {
+        flex-basis: 100%; /* Each service takes full width on small screens */
+    }
+}
